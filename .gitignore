@@ -1,0 +1,22 @@
+
+.settings/
+.project
+target/
+.classpath
+*.classpath
+
+.factorypath
+*.metadata/
+.metadata/
+*.settings/
+.Servers/
+*.Servers/
+Servers/
+
+#JIdea #
+########
+.idea/
+*.iml
+
+lib/
+a.xml

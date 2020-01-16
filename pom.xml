@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.packt.cookbook</groupId>
+    <artifactId>ch01</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>ch02_xml</module>
+        <module>ch02-jc</module>
+        <module>ch02-web-xml</module>
+        <module>ch02-web-jc</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <build>
+        <finalName>ch01-spring5-cookbook</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.2.3</version>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+
+<!--            <plugin>-->
+<!--                <groupId>org.apache.tomcat.maven</groupId>-->
+<!--                <artifactId>tomcat7-maven-plugin</artifactId>-->
+<!--                <version>2.2</version>-->
+<!--                <configuration>-->
+<!--                    <url>https://localhost:8443</url>-->
+<!--                    <path>/ch01</path>-->
+<!--                    <keystoreFile>D:\packt\spring_5_cookbook\keys\spring5server.keystore</keystoreFile>-->
+<!--                    <keystorePass>packt2020</keystorePass>-->
+<!--                    <update>true</update>-->
+<!--                    <username>packt</username>-->
+<!--                    <password>packt</password>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+
+        </plugins>
+
+    </build>
+
+
+</project>
