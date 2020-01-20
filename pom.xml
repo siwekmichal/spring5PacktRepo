@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.packt.cookbook</groupId>
-    <artifactId>ch01</artifactId>
+    <artifactId>springC</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <module>ch01</module>
         <module>ch02_xml</module>
         <module>ch02-jc</module>
         <module>ch02-web-xml</module>

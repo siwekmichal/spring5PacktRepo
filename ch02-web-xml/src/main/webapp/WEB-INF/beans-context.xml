@@ -152,4 +152,6 @@
         </property>
     </bean>
 
+    <bean id="dataServiceBean" class="org.packt.starter.ioc.model.DataService"></bean>
+
 </beans>

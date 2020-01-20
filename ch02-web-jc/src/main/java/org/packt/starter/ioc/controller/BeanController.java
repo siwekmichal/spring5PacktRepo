@@ -2,6 +2,7 @@ package org.packt.starter.ioc.controller;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.packt.starter.ioc.model.DataService;
 import org.packt.starter.ioc.model.Department;
@@ -14,13 +15,11 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.inject.Inject;
-
 @Controller
 public class BeanController {
 
     @Autowired
-    @Qualifier(value = "empRec2")
+    @Qualifier(value="empRec2")
     private Employee empRecs;
 
     @Inject
@@ -29,26 +28,25 @@ public class BeanController {
     @Resource(name="listEmployees")
     private ListEmployees listEmps;
 
-//    @Autowired
-//    private DataService dataService;
+    @Autowired
+    private DataService dataService;
 
     @RequestMapping("/list_emps.html")
-    public String showEmployee (ModelMap model){
+    public String showEmployee(ModelMap model){
         model.addAttribute("firstName", empRecs.getFirstName());
-//        model.addAttribute("title", dataService.getTitle());
-        return  "list-employees";
+        model.addAttribute("title", dataService.getTitle());
+        return "list-employees";
     }
 
     @RequestMapping("/show_dept.html")
-    public String getDepartment(Model model){
+    public String showDepartment(Model model){
         model.addAttribute("deptNo", dept2.getDeptNo());
-        return  "show-dept";
+        return "show-dept";
     }
 
-    @RequestMapping("view_emps.html")
+    @RequestMapping("/view_emps.html")
     public String viewEmps(Model model){
         model.addAttribute("empList", listEmps.getListEmps());
         return "view-emps";
     }
-
 }

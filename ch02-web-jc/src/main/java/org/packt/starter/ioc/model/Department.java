@@ -8,6 +8,12 @@ public class Department {
         System.out.println("a department is created.");
     }
 
+    public Department(Integer deptNo, String deptName) {
+        this.deptNo = deptNo;
+        this.deptName = deptName;
+        System.out.println("a department is created.");
+    }
+
     public Integer getDeptNo() {
         return deptNo;
     }

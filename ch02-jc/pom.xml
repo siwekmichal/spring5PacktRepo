@@ -23,7 +23,7 @@
     <packaging>war</packaging>
 
     <parent>
-        <artifactId>ch01</artifactId>
+        <artifactId>springC</artifactId>
         <groupId>org.packt.cookbook</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
