@@ -10,7 +10,9 @@
 <ul>
     <li><a href="${pageContext.request.contextPath}/simplecontroller.html">Simple Controller</a></li>
     <li><a href="${pageContext.request.contextPath}/simple/patterns.html">Patterns</a></li>
-    <li></li>
+    <li><a href="${pageContext.request.contextPath}/employee_form.html">Employee form</a></li>
+    <li><a href="${pageContext.request.contextPath}/send/multilist.html"><spring:message code="multi_facade" /></a></li>
+    <li><a href="${pageContext.request.contextPath}/send/multilistx.html"><spring:message code="multi_facade" /> - blank</a></li>
     <li></li>
     <li></li>
     <li></li>
