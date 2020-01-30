@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"org.packt.dissect.mvc", "org.packt.dissect.mvc.controller", "org.packt.dissect.mvc.validator"})
+@ComponentScan(basePackages = {"org.packt.dissect.mvc", "org.packt.dissect.mvc.controller", "org.packt.dissect.mvc.validator", "org.packt.dissect.mvc.model.data"})
 public class SpringContextConfig {
 
     @Bean

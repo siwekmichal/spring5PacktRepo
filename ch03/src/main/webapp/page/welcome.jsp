@@ -13,7 +13,10 @@
     <li><a href="${pageContext.request.contextPath}/employee_form.html">Employee form</a></li>
     <li><a href="${pageContext.request.contextPath}/send/multilist.html"><spring:message code="multi_facade" /></a></li>
     <li><a href="${pageContext.request.contextPath}/send/multilistx.html"><spring:message code="multi_facade" /> - blank</a></li>
-    <li></li>
+    <li><a href="${pageContext.request.contextPath}/salgrade.html">salgrade</a></li>
+    <li><a href="${pageContext.request.contextPath}/salarygrade_proceed.html">salarygrade_proceed</a></li>
+    <li><a href="${pageContext.request.contextPath}/login.html">login</a></li>
+    <li><a href="${pageContext.request.contextPath}/new_jump.html">new_jump</a></li>
     <li></li>
     <li></li>
     <li></li>

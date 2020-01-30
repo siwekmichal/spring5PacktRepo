@@ -13,6 +13,7 @@
         <module>ch02-jc</module>
         <module>ch02-web-xml</module>
         <module>ch02-web-jc</module>
+        <module>ch03-jdbc</module>
     </modules>
     <packaging>pom</packaging>
 
