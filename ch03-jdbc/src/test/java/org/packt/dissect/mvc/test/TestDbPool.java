@@ -28,6 +28,7 @@ public class TestDbPool {
 
     @Autowired
     private DataSource dataSource;
+
     private static final int MAX_ITERATIONS = 1000;
     private ConsoleReporter logReporter;
     private Timer timer;
@@ -35,21 +36,25 @@ public class TestDbPool {
     @Before
     public void init(){
         MetricRegistry metricRegistry = new MetricRegistry();
-        this.logReporter = ConsoleReporter.forRegistry(metricRegistry).build();
+
+        this.logReporter = ConsoleReporter
+                .forRegistry(metricRegistry)
+                .build();
         logReporter.start(1, TimeUnit.MINUTES);
         timer = metricRegistry.timer("connection");
     }
 
     @Test
     public void testOpenCloseConnections() throws SQLException {
-        for (int i = 0; i < MAX_ITERATIONS; i++){
+        for (int i = 0; i < MAX_ITERATIONS; i++) {
             Context context = timer.time();
             Connection conn = dataSource.getConnection();
             Statement stmt = conn.createStatement();
-            stmt.executeQuery("Select * from city");
+            stmt.executeQuery("select * from city");
             conn.close();
             context.stop();
         }
         logReporter.report();
+
     }
 }
