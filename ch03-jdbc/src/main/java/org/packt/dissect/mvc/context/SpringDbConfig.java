@@ -4,6 +4,7 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import com.zaxxer.hikari.HikariDataSource;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.tomcat.jdbc.pool.PoolProperties;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -71,5 +72,10 @@ public class SpringDbConfig {
         dataSource.setMaximumPoolSize(100);
 
         return dataSource;
+    }
+
+    @Bean
+    public SimpleJdbcInsert jdbcInsert() throws PropertyVetoException{
+        return new SimpleJdbcInsert(dataSource());
     }
 }
