@@ -70,13 +70,15 @@ public class TestDepartmentDao {
     @Test
     public void testUpdateDepartment(){
         Department rec1 = new Department();
+        String name = "Accounting Department";
         rec1.setId(9);
         rec1.setDeptId(555555);
-        rec1.setName("Accounting Department");
+        rec1.setName(name);
         departmentDaoImpl.updateDepartment(rec1);
 
         Department dept = departmentDaoImpl.getDepartmentData(9);
-        Assert.assertSame("Accounting Department",dept.getName());
+        Assert.assertTrue(name.equalsIgnoreCase(dept.getName()));
+//        Assert.assertSame((name).toLowerCase().trim(),dept.getName().toLowerCase().trim());
     }
 
     @Test

@@ -50,7 +50,7 @@ public class TestDbPool {
             Context context = timer.time();
             Connection conn = dataSource.getConnection();
             Statement stmt = conn.createStatement();
-            stmt.executeQuery("select * from city");
+            stmt.executeQuery("select * from world.city");
             conn.close();
             context.stop();
         }

@@ -33,7 +33,7 @@ public class TestEmployeeDao {
         rec.setEmail("sjctrags@gmail.com");
         rec.setEmpId(1065);
         rec.setDeptId(9);
-        employeeDaoImpl.addEmployeeBySJI(rec);
+        employeeDaoImpl.addEmployeeByJT(rec);
     }
 
     @Test
